@@ -12,14 +12,15 @@ namespace ConsoleApp1
         {
             #region Variable
             int[] arr = new int[100];
-            List<int> ar = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arTemp => Convert.ToInt32(arTemp)).ToList();
-            List<int> a = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(aTemp => Convert.ToInt32(aTemp)).ToList();
+            long[] arrLong = new long[100];
+            List<int> ar = arr.ToList();
+            List<int> a = arr.ToList();
 
-            List<int> b = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(bTemp => Convert.ToInt32(bTemp)).ToList();
+            List<int> b = arr.ToList();
 
-            int arCount = Convert.ToInt32(Console.ReadLine().Trim());
+            int arCount = arr.Count();
 
-            List<long> ar_Long = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arTemp => Convert.ToInt64(arTemp)).ToList();
+            List<long> ar_Long = arrLong.ToList();
 
             int result_int = 0;
 
@@ -34,6 +35,7 @@ namespace ConsoleApp1
             {
                 arr[i] = random.Next(1, 1001);
             }
+            Console.WriteLine("Acceso");
 
             switch (Ejercicio)
             {
@@ -90,9 +92,9 @@ namespace ConsoleApp1
                     #endregion
                     break;
                 case 3:
-                     val1 = Convert.ToInt32(Console.ReadLine());
-                     val2 = Convert.ToInt32(Console.ReadLine());
-                     sum = solveMeFirst(val1, val2);
+                    val1 = Convert.ToInt32(Console.ReadLine());
+                    val2 = Convert.ToInt32(Console.ReadLine());
+                    sum = solveMeFirst(val1, val2);
                     Console.WriteLine(sum);
                     break;
                 case 4:
@@ -125,8 +127,28 @@ namespace ConsoleApp1
 
                     staircase(n_new8);
                     break;
-                default:
+                case 9:
+                    //256741038 623958417 467905213 714532089 938071625
+                    List<int> miArreglo = new List<int> { 256741038, 623958417, 467905213, 714532089, 938071625 };
+                    int ContadorMaximo = miArreglo.Count();
+                    int[] arregloOrdenado = miArreglo.OrderBy(numero => numero).ToArray();
 
+                    long SumaMinimo = arregloOrdenado[0];
+                    long SumaMaximo = arregloOrdenado[ContadorMaximo - 1];
+                    long R1 = 0;
+                    long R2 = 0;
+
+                    for (int i = 1; i < ContadorMaximo - 1; i++)
+                    {
+                        SumaMinimo += arregloOrdenado[i];
+                        SumaMaximo += arregloOrdenado[i];
+                        //Console.WriteLine(arregloOrdenado[i]);
+                    }
+                    //2063136757 2744467344
+                    Console.WriteLine(SumaMinimo + " " + SumaMaximo);
+                //Console.WriteLine(R1 + " "+ R2);
+                default:
+                    
                     break;
             }
 
@@ -251,6 +273,6 @@ namespace ConsoleApp1
 
 
         }
-        }
     }
+    
 }
