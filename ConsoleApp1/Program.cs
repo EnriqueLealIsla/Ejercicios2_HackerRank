@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -128,7 +129,6 @@ namespace ConsoleApp1
                     staircase(n_new8);
                     break;
                 case 9:
-                    //256741038 623958417 467905213 714532089 938071625
                     List<int> miArreglo = new List<int> { 256741038, 623958417, 467905213, 714532089, 938071625 };
                     int ContadorMaximo = miArreglo.Count();
                     int[] arregloOrdenado = miArreglo.OrderBy(numero => numero).ToArray();
@@ -142,13 +142,29 @@ namespace ConsoleApp1
                     {
                         SumaMinimo += arregloOrdenado[i];
                         SumaMaximo += arregloOrdenado[i];
-                        //Console.WriteLine(arregloOrdenado[i]);
                     }
-                    //2063136757 2744467344
                     Console.WriteLine(SumaMinimo + " " + SumaMaximo);
-                //Console.WriteLine(R1 + " "+ R2);
+                    break;
+                case 10:
+                    List<int> candles = new List<int> { 3, 2, 1, 3 };
+                    int Count_candles = candles.Count();
+                    int Cantidad_max = candles.Max();
+
+                    int[] candlesCantidadMax = candles.Where(num => num == Cantidad_max).ToArray();
+
+                    Console.WriteLine(candlesCantidadMax.Count());
+                    break;
+                case 11:
+                    string Fecha = "07:05:45PM";
+                    DateTime fechaConvertida = DateTime.ParseExact(Fecha, "hh:mm:sstt", CultureInfo.InvariantCulture);
+                    Console.WriteLine(fechaConvertida.ToString("HH:mm:ss"));
+                    break;
                 default:
-                    
+                   int counter = 4;
+                    for (int p0 = 0; p0 < 3; p0++)
+                        for (int p1 = 0; p1 < 3; p1++)
+                            for (int p2 = 0; p2 < 3; p2++)
+                                Console.WriteLine($"Position [{counter++, 2}]: {p0}{p1}{p2}");
                     break;
             }
 
