@@ -159,12 +159,53 @@ namespace ConsoleApp1
                     DateTime fechaConvertida = DateTime.ParseExact(Fecha, "hh:mm:sstt", CultureInfo.InvariantCulture);
                     Console.WriteLine(fechaConvertida.ToString("HH:mm:ss"));
                     break;
+                case 12:
+                    List<int> UniverityRank = new List<int> { 73, 67, 38, 33 };
+
+
+                    for (int i = 0; i < UniverityRank.Count(); i++)
+                    {
+                        int rank = UniverityRank[i];
+                        double Multiplier = Math.Ceiling((double)rank / 5) * 5;
+
+                        if (Multiplier - Convert.ToInt32(UniverityRank[i]) < 0)
+                        {
+                            Multiplier += 5;
+                        }
+
+                        if (UniverityRank[i] > 34)
+                        {
+                            if (Multiplier - rank < 3 && Multiplier - rank > 0)
+                            {
+
+                                if (UniverityRank[i] < 41 && Multiplier - rank > 0)
+                                {
+                                    UniverityRank[i] = 40;
+                                }
+                                else
+                                {
+                                    UniverityRank[i] = (int)Multiplier;
+                                }
+
+                            }
+                            else
+                            {
+
+                            }
+                        }
+                        else
+                        {
+
+                        }
+
+
+                        Console.WriteLine(UniverityRank[i]);
+                    }
+                    break;
                 default:
-                   int counter = 4;
-                    for (int p0 = 0; p0 < 3; p0++)
-                        for (int p1 = 0; p1 < 3; p1++)
-                            for (int p2 = 0; p2 < 3; p2++)
-                                Console.WriteLine($"Position [{counter++, 2}]: {p0}{p1}{p2}");
+                    
+
+
                     break;
             }
 
