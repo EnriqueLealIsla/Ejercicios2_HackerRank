@@ -1,0 +1,60 @@
+
+#####################################
+WITH CityLengths AS (
+    SELECT 
+        City,
+        LEN(City) AS Length
+    FROM 
+        Station
+)
+SELECT TOP 1 
+    City AS SmallestCityName,
+    Length AS MinimumLength
+FROM 
+    CityLengths
+WHERE 
+    Length = (SELECT MIN(Length) FROM CityLengths)
+ORDER BY 
+    City ASC;
+
+WITH CityLengths AS (
+    SELECT 
+        City,
+        LEN(City) AS Length
+    FROM 
+        Station
+)
+SELECT TOP 1 
+    City AS LargestCityName,
+    Length AS MaximumLength
+FROM 
+    CityLengths
+WHERE 
+    Length = (SELECT MAX(Length) FROM CityLengths)
+ORDER BY 
+    City ASC;
+
+#####################################
+
+
+WITH VowelCities AS (
+    SELECT city 
+    FROM Station 
+    WHERE LOWER(SUBSTRING(city, 1, 1)) IN ('a', 'e', 'i', 'o', 'u')
+)
+SELECT city 
+FROM VowelCities;
+
+
+######################################
+
+
+WITH VowelCities AS (
+    SELECT city 
+    FROM Station 
+    WHERE LOWER(RIGHT(city, 1, 1)) IN ('a', 'e', 'i', 'o', 'u')
+)
+SELECT city 
+FROM VowelCities;
+
+#####################################
