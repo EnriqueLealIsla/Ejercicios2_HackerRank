@@ -12,3 +12,10 @@ C:\Users\Pc\source\repos\ConsoleApp1\Ejercicios_HackerRank\ConsoleApp1\obj\Debug
 C:\Users\Pc\source\repos\ConsoleApp1\Ejercicios_HackerRank\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
 C:\Users\Pc\source\repos\ConsoleApp1\Ejercicios_HackerRank\ConsoleApp1\bin\Debug\ConsoleApp1.exe
 C:\Users\Pc\source\repos\ConsoleApp1\Ejercicios_HackerRank\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\Pc\Source\Repos\Ejercicios2_HackerRank\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\Pc\Source\Repos\Ejercicios2_HackerRank\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\Pc\Source\Repos\Ejercicios2_HackerRank\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\Pc\Source\Repos\Ejercicios2_HackerRank\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\Pc\Source\Repos\Ejercicios2_HackerRank\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\Pc\Source\Repos\Ejercicios2_HackerRank\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\Pc\Source\Repos\Ejercicios2_HackerRank\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
