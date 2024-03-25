@@ -91,11 +91,6 @@ namespace ConsoleApp1
 
                     Console.WriteLine(Resultado);
                     #endregion
-
-                    Resultado = Math.Round(Resultado, (int)6);
-
-                    Console.WriteLine(Resultado);
-                    #endregion
                     break;
                 case 2:
                     Eje(arr);
